@@ -12,7 +12,7 @@ app.use(cors());
 const router = express.Router();
 const API_KEY = process.env.API_KEY;
 const weatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=halifax,ca&&units=metric&appid=${API_KEY}`;
-console.log(`Querry is : ${weatherAPI}`);
+
 
 router.get('/weather', async (req, res) => {
     try {

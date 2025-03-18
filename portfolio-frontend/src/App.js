@@ -23,6 +23,7 @@ function App() {
         return response.json;
       })
       .then((data) => {
+        console.log("Weather data: ",data);
         setWeather(data);
         setLoading(false);
       })
