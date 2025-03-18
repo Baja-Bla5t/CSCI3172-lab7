@@ -18,9 +18,9 @@ function App() {
     fetch("https://lab7-backend.netlify.app/.netlify/functions/api/weather")
       .then((response) => {
         if(!response.ok){
-          throw new Error("Failed to fetch weather data.")
+          throw new Error(`HTTP status error!: ${response.status}`);
         }
-        return response.json;
+        return response.json();
       })
       .then((data) => {
         console.log("Weather data: ",data);
