@@ -5,21 +5,15 @@ const cors = require("cors");
 const axios = require("axios");
 const fetch = require("node-fetch");
 
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-
 dotenv.config();
 
 const app = express();
 app.use(cors());
 const router = express.Router();
 
-const weatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=halifax,ca&&units=metric&appid=${process.env.WEATHER_API_KEY}`;
+const weatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=halifax,ca&&units=metric&appid=${process.env.API_KEY}`;
 
 router.get('/weather', async (req, res) => {
-    fetch(weatherAPI)
-        .then(res => res.json())
-        .then(json => console.log(json))
-        .catch(err => console.error('error:' + err));
     try {
         let response = await fetch(weatherAPI);
         response = await response.json();
