@@ -14,6 +14,7 @@ function Projects() {
         return response.json();
       })
       .then((data) => {
+        console.log("Projects Data: ", data);
         setProjects(data);
         setLoading(false);
       })
