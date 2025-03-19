@@ -46,7 +46,7 @@ router.get('/weather', async (req, res) => {
 //Projects
 
 router.get('/projects', (req, res) => {
-    fs.readFile("./src/projects.json","utf8", (err, data) => {
+    fs.readFile("../../src/projects.json","utf8", (err, data) => {
         if(err){
             console.error("There was an error fetching projects: ", err);
             res.status(500).json({error : "Internal Server Error"});
