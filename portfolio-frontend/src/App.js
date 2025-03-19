@@ -2,12 +2,12 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React from "react";
 import {useState, useEffect} from "react";
 
-import Home from './components';
-import About from './components';
-import Projects from './components';
-import Header from './components';
-import Footer from './components';
+import About from './components/About';
 import ErrorPage from './components/ErrorPage';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Home from './components/Home';
+import Projects from './components/Projects';
 
 function App() {
   const [state, setState] = useState(null);

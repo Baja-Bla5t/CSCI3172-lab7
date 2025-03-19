@@ -1,4 +1,5 @@
 import "../App.cs";
+import { useState } from 'react';
 
 function Footer() {
     return (
