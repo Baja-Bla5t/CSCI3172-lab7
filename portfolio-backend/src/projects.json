@@ -1,0 +1,16 @@
+[
+    {
+        "ProjectName" : "Some Project",
+        "Author" : "Malcolm Chapman",
+        "Languages" : "Java, Python, Cow",
+        "Description" : "Testing",
+        "Skills" : "Coding, Communication, something else"
+    },
+    {
+        "ProjectName" : "Another Project",
+        "Author" : "Malcolm Chapman",
+        "Languages" : "French",
+        "Description" : "Testing Testing",
+        "Skills" : "Coding, Communication, something else"
+    }
+]

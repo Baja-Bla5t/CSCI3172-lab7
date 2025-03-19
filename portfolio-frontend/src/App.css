@@ -33,7 +33,9 @@ body.dark {
 /* Navbar styling */
 .bg-light {
   background-color: #f8f9fa;
+  color: black;
 }
 .bg-dark {
   background-color: #343a40;
+  color: white;
 }

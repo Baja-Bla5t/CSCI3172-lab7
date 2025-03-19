@@ -52,7 +52,7 @@ function Header() {
                         <div>
                             <h2>Weather in {weather.city}</h2>
                             <p>Temperature: {weather.temperature.current}°C</p>
-                            <p>Feels Like: {weather.temperature.feels_like}°C</p>
+                            <p>Humidity: {weather.humidity}</p>
                         </div>
                     )}
                 </div>

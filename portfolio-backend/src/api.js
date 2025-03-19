@@ -4,15 +4,16 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const axios = require("axios");
 const fetch = require("node-fetch");
-
+const fs = require("fs");
 dotenv.config();
 
 const app = express();
 app.use(cors());
 const router = express.Router();
+
+//Weather
 const API_KEY = process.env.API_KEY;
 const weatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=halifax,ca&&units=metric&appid=${API_KEY}`;
-
 
 router.get('/weather', async (req, res) => {
     try {
@@ -42,12 +43,19 @@ router.get('/weather', async (req, res) => {
     }
 });
 
-router.get('/', (req, res) => {
-    res.json({
-        message: "Hello World!"
+//Projects
+
+router.get('/Projects', (req, res) => {
+    fs.readFile("./src/projects.json","utf8", (err, data) => {
+        if(err){
+            console.error("There was an error fetching projects: ", err);
+            res.status(500).json({error : "Internal Server Error"});
+            return;
+        }
+        res.json(JSON.parse(data));
     });
 });
 
-module.exports = app;
 app.use('/.netlify/functions/api', router);
+module.exports = app;
 module.exports.handler = serverless(app);
