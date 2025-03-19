@@ -46,7 +46,7 @@ router.get('/weather', async (req, res) => {
 
 //Projects
 console.log("Current Directory: ",__dirname);
-const projectPath = path.resolve(__dirname,"projects.json");
+const projectPath = path.resolve(__dirname,"..","projects.json");
 console.log("Project Path: ",projectPath);
 router.get('/projects', (req, res) => {
     fs.readFile(projectPath,"utf8", (err, data) => {
