@@ -6,7 +6,7 @@ function Projects() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://lab7-backend.netlify.app/.netlify/functions/api/Projects")
+    fetch("https://lab7-backend.netlify.app/.netlify/functions/api/projects")
       .then((response) => {
         if(!response.ok){
           throw new Error(`HTTP Error: ${response.status}`);
