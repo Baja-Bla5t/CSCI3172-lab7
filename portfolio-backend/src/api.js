@@ -5,7 +5,6 @@ const cors = require("cors");
 const axios = require("axios");
 const fetch = require("node-fetch");
 const fs = require("fs");
-const path = require("path");
 dotenv.config();
 
 const app = express();
@@ -45,7 +44,7 @@ router.get('/weather', async (req, res) => {
 });
 
 //Projects
-const projectPath = this.path.join(__dirname, "/src/projects.json");
+console.log("Current Directory: ",__dirname);
 router.get('/projects', (req, res) => {
     fs.readFile(projectPath,"utf8", (err, data) => {
         if(err){
