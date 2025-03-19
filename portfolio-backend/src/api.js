@@ -55,8 +55,8 @@ router.get('/projects', (req, res) => {
             res.status(500).json({error : "Internal Server Error"});
             return;
         }
-        console.log("Data: ", res.json(JSON.parse(data)));
-        res.json(JSON.parse(data));
+        console.log("Data: ", data);
+        res.status(200).json(data);
     });
 });
 
