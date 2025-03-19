@@ -5,6 +5,7 @@ const cors = require("cors");
 const axios = require("axios");
 const fetch = require("node-fetch");
 const fs = require("fs");
+const path = require("path");
 dotenv.config();
 
 const app = express();
@@ -45,8 +46,10 @@ router.get('/weather', async (req, res) => {
 
 //Projects
 console.log("Current Directory: ",__dirname);
+const projectPath = path.resolve(__dirname, "..", "projects.json");
+console.log("Project Path: ",projectPath);
 router.get('/projects', (req, res) => {
-    fs.readFile("./projects.json","utf8", (err, data) => {
+    fs.readFile(projectPath,"utf8", (err, data) => {
         if(err){
             console.error("There was an error fetching projects: ", err);
             res.status(500).json({error : "Internal Server Error"});
