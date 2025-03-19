@@ -1,4 +1,4 @@
-import "../App.cs";
+import "../App.css";
 
 function Header() {
     return (
