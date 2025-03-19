@@ -3,4 +3,4 @@
     node_bundler = "esbuild"
 [functions]
     node_bundler = "esbuild"
-    included_files = "projects.json"
+    included_files = ["projects.json"]
