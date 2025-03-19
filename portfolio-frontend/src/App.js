@@ -1,5 +1,13 @@
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React from "react";
 import {useState, useEffect} from "react";
+
+import Home from './components';
+import About from './components';
+import Projects from './components';
+import Header from './components';
+import Footer from './components';
+import ErrorPage from './components/ErrorPage';
 
 function App() {
   const [state, setState] = useState(null);
@@ -36,6 +44,7 @@ function App() {
   }, []);
 
   return (
+    
     <div className="container text-center">
       <h1>Welcome to My Full-Stack App </h1>
       <p>This is a React app styled with Bootstrap 5.</p>
@@ -52,6 +61,21 @@ function App() {
           <p>Wind: {weather.wind.speed} m/s ({weather.wind.direction}°)</p>
         </div>
       )}
+      <>
+      <Router>
+        <Header />
+        <main className="container-fluid min-vh-100 p-0 d-flex justify-content-center">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/*" element={<ErrorPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </>
     </div>
   );
 }
