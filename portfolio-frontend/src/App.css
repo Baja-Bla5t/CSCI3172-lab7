@@ -17,3 +17,23 @@ li a:hover{background-color: grey;}
   font-weight: bold; /* Optional: Set font weight */
   color: whitesmoke; /* Customize font color */
 }
+
+/* Light Mode */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+/* Navbar styling */
+.bg-light {
+  background-color: #f8f9fa;
+}
+.bg-dark {
+  background-color: #343a40;
+}

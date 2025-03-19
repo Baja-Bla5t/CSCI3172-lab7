@@ -3,6 +3,18 @@ import React from "react";
 import {useState, useEffect} from "react";
 
 function Header() {
+    //Theme switcher
+    const[theme, setTheme] = useState(localStorage.getItem("theme" || "light"));
+    useEffect(() => {
+        document.body.className = theme;
+        localStorage.setItem("theme", theme);
+
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(theme === "light" ? "dark" : "light" );
+    };
+    //Weather display
     const [weather, setWeather] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -29,9 +41,9 @@ function Header() {
     }, []);
     return (
         <>
-            <div className="bg-dark d-flex justify-content-between align-items-center navbar navbar-expand-lg mb-4" role="navigation" id="navigationBar">
+            <div className={`d-flex justify-content-between align-items-center navbar navbar-expand-lg mb-4 bg-${theme}`} role="navigation" id="navigationBar">
                 <div className="d-flex">
-                    <img src="../../public/logo192.png"></img>
+                    <img src="/logo192.png" alt="Theme switcher" onClick={toggleTheme}></img>
                 </div>
                 <div className="text-center text-white">
                     {loading && <p>Loading weather data...</p>}
