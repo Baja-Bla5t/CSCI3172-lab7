@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 function Projects() {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([json]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
