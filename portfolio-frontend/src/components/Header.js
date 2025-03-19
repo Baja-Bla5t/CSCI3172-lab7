@@ -29,12 +29,11 @@ function Header() {
     }, []);
     return (
         <>
-            <div className="bg-dark d-flex justify-content-center navbar navbar-expand-lg mb-4" role="navigation" id="navigationBar">
+            <div className="bg-dark d-flex justify-content-between align-items-center navbar navbar-expand-lg mb-4" role="navigation" id="navigationBar">
                 <div className="d-flex">
-
+                    <img src="../../public/logo192.png"></img>
                 </div>
-                <div className="d-flex">
-                    {state ? (<p>{state.message}</p>) : (<p>Loading...</p>)}
+                <div className="text-center text-white">
                     {loading && <p>Loading weather data...</p>}
                     {error && <p>Error: {error}</p>}
                     {weather && (
