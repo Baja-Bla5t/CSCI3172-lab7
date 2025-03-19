@@ -1,4 +1,6 @@
 import "../App.css";
+import React from "react";
+import {useState, useEffect} from "react";
 
 function Header() {
     const [weather, setWeather] = useState(null);
@@ -27,8 +29,7 @@ function Header() {
     }, []);
     return (
         <>
-
-            <div className="bg-dark d-flex justify-content-center navbar navbar-expand-lg mb-4" role="navigation">
+            <div className="bg-dark d-flex justify-content-center navbar navbar-expand-lg mb-4" role="navigation" id="navigationBar">
                 <div className="d-flex">
 
                 </div>
