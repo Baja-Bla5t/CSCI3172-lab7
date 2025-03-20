@@ -62,7 +62,7 @@ router.get('/projects', (req, res) => {
                 console.log("Projects: ", projects);
                 throw new Error("Parsed data is not an array");
             }
-            res.status(200).json(data);
+            res.status(200).json(projects);
         }
         catch (parseError){
             console.error("Parsing error: ", parseError);
