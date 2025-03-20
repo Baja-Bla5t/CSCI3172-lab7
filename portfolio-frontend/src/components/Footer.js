@@ -4,7 +4,7 @@ import { useState } from 'react';
 function Footer() {
     return (
         <>
-          <footer className="bg-dark text-white p-3 mt-4" >
+          <footer className="bg-dark text-white p-3 mt-auto" >
             <div className="container-fluid d-flex">
               <ul className="d-flex gap-4">
                 <li>Email: ml931437@dal.ca</li>

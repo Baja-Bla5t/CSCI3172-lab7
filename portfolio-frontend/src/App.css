@@ -46,3 +46,9 @@ body.dark .navbar a{
   background-color: #343a40;
   color: white;
 }
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}

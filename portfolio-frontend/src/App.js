@@ -10,36 +10,12 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 
 function App() {
-  const [weather, setWeather] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch("https://lab7-backend.netlify.app/.netlify/functions/api/weather")
-      .then((response) => {
-        if(!response.ok){
-          throw new Error(`HTTP status error!: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Weather data: ",data);
-        setWeather(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error while fetching data: ", error);
-        setError(error.message);
-        setLoading(false);
-      });
-
-  }, []);
 
   return (
     <>
       <Router>
         <Header />
-        <main className="container-fluid min-vh-100 p-0 d-flex justify-content-center">
+        <main className="container-fluid min-vh-100 d-flex justify-content-center main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
