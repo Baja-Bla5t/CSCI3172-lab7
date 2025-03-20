@@ -12,7 +12,7 @@ li a{
 li a:hover{background-color: grey;}
 
 /* Light Mode */
-body.light .navbar-nav .nav-item .nav-link{
+body.light .navbar-nav .nav-item .nav-link .main-content{
   font-family: 'Arial', 'Times New Roman', Times, serif; 
   font-size: 1.2rem; 
   font-weight: bold; 
@@ -25,7 +25,7 @@ body.light .navbar a {
 }
 
 /* Dark Mode */
-body.dark .navbar-nav .nav-item .nav-link{
+body.dark .navbar-nav .nav-item .nav-link .main-content{
   font-family: 'Arial', 'Times New Roman', Times, serif; 
   font-size: 1.2rem; 
   font-weight: bold; 
