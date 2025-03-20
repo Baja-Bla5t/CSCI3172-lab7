@@ -26,7 +26,7 @@ function Projects() {
 
   return (
     <>
-      <div className="container-fluid d-flex flex-column align-items-center" style={{height: "100vh"}}>
+      <div className="container-fluid d-flex flex-column align-items-start" style={{height: "100vh"}}>
         <h1>Work Samples</h1>
         {loading && <p>Loading projects...</p>}
         {error && <p>Error: {error}</p>}

@@ -19,14 +19,22 @@ li a:hover{background-color: grey;}
 }
 
 /* Light Mode */
-body.light {
+body.light .navbar{
   background-color: white;
   color: black;
 }
 
+body.light .navbar a {
+  color: black;
+}
+
 /* Dark Mode */
-body.dark {
+body.dark .navbar{
   background-color: #121212;
+  color: white;
+}
+
+body.dark .navbar a{
   color: white;
 }
 
