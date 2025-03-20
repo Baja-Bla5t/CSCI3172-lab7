@@ -14,6 +14,8 @@ function Header() {
     const toggleTheme = () => {
         setTheme(theme === "light" ? "dark" : "light" );
     };
+
+    const themeIcon = theme === "light" ? "/dayModeIcon.jpg" : "/nightModeIcon.jpg";
     //Weather display
     const [weather, setWeather] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -43,7 +45,7 @@ function Header() {
         <>
             <div className={`d-flex justify-content-between align-items-center navbar navbar-expand-lg mb-4 bg-${theme}`} role="navigation" id="navigationBar">
                 <div className="d-flex">
-                    <img src="/logo192.png" alt="Theme switcher" onClick={toggleTheme}></img>
+                    <img src={themeIcon} alt="Theme switcher" onClick={toggleTheme}></img>
                 </div>
                 <div className="navbar-nav">
                     {loading && <p>Loading weather data...</p>}
