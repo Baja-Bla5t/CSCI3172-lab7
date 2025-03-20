@@ -58,7 +58,10 @@ router.get('/projects', (req, res) => {
         try{
             console.log("Data: ", data);
             const projects = JSON.parse(data);
-            console.log("Parsed data: ", projects);
+            if (!Array.isArray(projects)) {
+                console.log("Projects: ", projects);
+                throw new Error("Parsed data is not an array");
+            }
             res.status(200).json(data);
         }
         catch (parseError){
