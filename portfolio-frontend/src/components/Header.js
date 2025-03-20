@@ -45,11 +45,11 @@ function Header() {
                 <div className="d-flex">
                     <img src="/logo192.png" alt="Theme switcher" onClick={toggleTheme}></img>
                 </div>
-                <div className="text-center text-white">
+                <div className="navbar-nav">
                     {loading && <p>Loading weather data...</p>}
                     {error && <p>Error: {error}</p>}
                     {weather && (
-                        <div>
+                        <div className="navbar-nav">
                             <h2>Weather in {weather.city}</h2>
                             <p>Temperature: {weather.temperature.current}°C</p>
                             <p>Humidity: {weather.humidity}</p>
