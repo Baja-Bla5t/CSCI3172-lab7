@@ -1,16 +1,30 @@
 [
     {
-        "ProjectName" : "Some Project",
+        "ProjectName" : "Project 1",
         "Author" : "Malcolm Chapman",
         "Languages" : "Java, Python, Cow",
         "Description" : "Testing",
         "Skills" : "Coding, Communication, something else"
     },
     {
-        "ProjectName" : "Another Project",
+        "ProjectName" : "Project 2",
         "Author" : "Malcolm Chapman",
         "Languages" : "French",
         "Description" : "Testing Testing",
-        "Skills" : "Coding, Communication, something else"
+        "Skills" : "Coding, Communication, Acrobatics"
+    },
+    {
+        "ProjectName" : "Project 3",
+        "Author" : "Malcolm Chapman",
+        "Languages" : "French",
+        "Description" : "Testing Testing",
+        "Skills" : "Acrobatics, Communication, something else"
+    },
+    {
+        "ProjectName" : "Project 4",
+        "Author" : "Malcolm Chapman",
+        "Languages" : "French",
+        "Description" : "Testing Testing",
+        "Skills" : "Teamwork, Communication, Leadership"
     }
 ]

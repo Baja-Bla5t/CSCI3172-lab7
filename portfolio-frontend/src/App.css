@@ -26,9 +26,9 @@ body.light .navbar a {
 
 /* Dark Mode */
 body.dark .navbar-nav .nav-item .nav-link{
-  font-family: 'Arial', 'Times New Roman', Times, serif; /* Change to your desired font family */
-  font-size: 1.2rem; /* Customize font size */
-  font-weight: bold; /* Optional: Set font weight */
+  font-family: 'Arial', 'Times New Roman', Times, serif; 
+  font-size: 1.2rem; 
+  font-weight: bold; 
   background-color: #121212;
   color: white;
 }
