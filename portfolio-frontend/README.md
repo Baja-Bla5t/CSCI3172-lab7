@@ -1,9 +1,10 @@
-**[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
+**[LAB7]**
+Created a webportfolio with backend and frontend capability. The backend is hosted on netlify and servers requests for projects and the weather in halifax. The frontend is hosted on AWS amplify and displays the entire site. Various frameworks were used in the development including react, bootstrap, and npm for javascript, styling, and dependency management respectively.
 
 * *Date Created*: 15 MAR 2025
 * *Last Modification Date*: 20 MAR 2025
 * *GitHub URL*: https://github.com/Baja-Bla5t/CSCI3172-lab7
-* *GitLab URL*: 
+* *GitLab URL*: https://git.cs.dal.ca/mchapman/CSCI3172-lab7
 * *Netlify URL*: https://lab7-backend.netlify.app/ (Backend will not display anything)
 * *Amplify URL*: https://main.d2pshuou2gc2wi.amplifyapp.com/ (Frontend will display content)
 
@@ -15,7 +16,20 @@ If what is being submitted is an individual Lab or Assignment, you may simply in
 
 ## Built With
 
-N / A
+* [bootstrap] https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css - The web framework used
+    Bootstrap was used for element classing and css layout.
+
+* [NPM](https://www.npmjs.com/) - Dependency Management
+    NPM was used for package installation and Management
+
+* [React](https://react.dev/) - Javascript library
+
+* [Netlify](https://app.netlify.com/sites/lab5-recipe-app/overview) - Backend deployment server
+    Used to deploy web application
+
+*[Amplify](https://aws.amazon.com/amplify/) - Frontend deployment server.
+
+*[Open Weather API] (https://openweathermap.org/api) - Used to display weather information in header file.
 
 ## Sources Used
 
