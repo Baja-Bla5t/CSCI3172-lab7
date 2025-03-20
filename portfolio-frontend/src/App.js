@@ -15,7 +15,7 @@ function App() {
     <>
       <Router>
         <Header />
-        <main className="container-fluid min-vh-100 d-flex justify-content-center main-content">
+        <main className={`container-fluid min-vh-100 d-flex justify-content-center main-content bg-${theme}`}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
