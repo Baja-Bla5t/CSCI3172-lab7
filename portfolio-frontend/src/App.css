@@ -11,15 +11,11 @@ li a{
 }
 li a:hover{background-color: grey;}
 
-.navbar-nav .nav-item .nav-link {
-  font-family: 'Arial', 'Times New Roman', Times, serif; /* Change to your desired font family */
-  font-size: 1.2rem; /* Customize font size */
-  font-weight: bold; /* Optional: Set font weight */
-  color: whitesmoke; /* Customize font color */
-}
-
 /* Light Mode */
-body.light .navbar{
+body.light .navbar-nav .nav-item .nav-link{
+  font-family: 'Arial', 'Times New Roman', Times, serif; 
+  font-size: 1.2rem; 
+  font-weight: bold; 
   background-color: white;
   color: black;
 }
@@ -29,7 +25,10 @@ body.light .navbar a {
 }
 
 /* Dark Mode */
-body.dark .navbar{
+body.dark .navbar-nav .nav-item .nav-link{
+  font-family: 'Arial', 'Times New Roman', Times, serif; /* Change to your desired font family */
+  font-size: 1.2rem; /* Customize font size */
+  font-weight: bold; /* Optional: Set font weight */
   background-color: #121212;
   color: white;
 }
