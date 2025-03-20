@@ -32,7 +32,7 @@ function Projects() {
 
   const uniqueSkills = [... new Set(projects.flatMap((p) => p.Skills.split(", ")))];
   const filteredProjects = projects.filter((project) => {
-    const matchesSearch = project.ProjectName.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = project.ProjectName.toLowerCase().includes(skillQuerry.toLowerCase());
     const matchesSkill = selectedSkill ? project.Skills.includes(selectedSkill) : true;
     return matchesSearch && matchesSkill;
   });
@@ -45,13 +45,13 @@ function Projects() {
         type="text"
         className="form-control mb-3"
         placeholder="Search projects..."
-        value={searchQuery}
-        onChange={(event) => setSearchQuery(event.target.value)}
+        value={skillQuerry}
+        onChange={(event) => setSkillQuerry(event.target.value)}
       />
       
       <div className="d-flex gap-2 flex-wrap">
-        {allSkills.length > 0 ? (
-          allSkills.map((skill, index) => (
+        {uniqueSkills.length > 0 ? (
+          uniqueSkills.map((skill, index) => (
             <button
               key={index}
               className={`btn ${selectedSkill === skill ? "btn-primary" : "btn-outline-primary"}`}
