@@ -14,7 +14,7 @@ function Projects() {
         return response.json();
       })
       .then((data) => {
-        console.log("Projects Data: ", data);
+        console.log("Projects Data: ", data, Array.isArray(data));
         setProjects(data);
         setLoading(false);
       })
@@ -32,7 +32,7 @@ function Projects() {
         {error && <p>Error: {error}</p>}
 
       <ul>
-        {projects.map((project, index) => {
+        {projects.map((project, index) => (
           <li key={index}>
             <h3>{project.ProjectName}</h3>
             <p>Author: {project.Author}</p>
@@ -40,7 +40,7 @@ function Projects() {
             <p>Description: {project.Description}</p>
             <p>Skills: {project.Skills}</p>
           </li>
-        })}
+        ))}
       </ul>
       </div>
     </>
