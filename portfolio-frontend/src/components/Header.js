@@ -51,7 +51,7 @@ function Header() {
                     {loading && <p>Loading weather data...</p>}
                     {error && <p>Error: {error}</p>}
                     {weather && (
-                        <div className="navbar-nav">
+                        <div className="navbar-nav d-flex gap-1">
                             <h2>Weather in {weather.city}</h2>
                             <p>Temperature: {weather.temperature.current}°C</p>
                             <p>Humidity: {weather.humidity}</p>
