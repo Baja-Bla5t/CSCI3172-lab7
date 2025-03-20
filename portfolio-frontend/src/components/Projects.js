@@ -44,7 +44,7 @@ function Projects() {
         <input
         type="text"
         className="form-control mb-3"
-        placeholder="Search projects..."
+        placeholder="Search projects by name..."
         value={skillQuerry}
         onChange={(event) => setSkillQuerry(event.target.value)}
       />
