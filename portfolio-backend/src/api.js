@@ -55,8 +55,16 @@ router.get('/projects', (req, res) => {
             res.status(500).json({error : "Internal Server Error"});
             return;
         }
-        console.log("Data: ", data);
-        res.status(200).json(data);
+        try{
+            console.log("Data: ", data);
+            const projects = JSON.parse(data);
+            console.log("Parsed data: ", projects);
+            res.status(200).json(data);
+        }
+        catch (parseError){
+            console.error("Parsing error: ", parseError);
+            res.status(500).json({error: "Invalid JSON in file format"});
+        }
     });
 });
 
